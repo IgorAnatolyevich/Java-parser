@@ -72,7 +72,7 @@ public class Main{
                         String password = "pass";
 
                         Connection conn = DriverManager.getConnection(url, login, password);
-                        OracleCallableStatement cs = (OracleCallableStatement) conn.prepareCall("{call WRITE_EVENT_TEST (?, ?, ?)}");
+                        OracleCallableStatement cs = (OracleCallableStatement) conn.prepareCall("{call PROCEDURE (?, ?, ?)}");
 
                         cs.setString(1, strings.get(data_1));
                         cs.setString(2,  strings.get(data_2));
